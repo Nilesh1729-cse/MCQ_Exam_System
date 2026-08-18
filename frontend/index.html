@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in · Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="page">
+    <!-- Left: brand panel -->
+    <section class="brand-panel">
+      <div class="brand-mark"><span class="dot"></span> ExamPortal</div>
+
+      <div class="brand-hero">
+        <h1>Academic<br /><em>Evaluation</em> System.</h1>
+        <p>Secure portal for students to take assessments and examiners to manage question banks.</p>
+      </div>
+
+      <svg class="rings" viewBox="0 0 320 320" aria-hidden="true">
+        <circle class="ring-outer" cx="160" cy="160" r="150" />
+        <circle class="ring-mid" cx="160" cy="160" r="112" />
+        <circle class="ring-inner" cx="160" cy="160" r="78" />
+      </svg>
+
+      <div class="status-ticker">
+        <span class="status-pulse checking" data-status-dot></span>
+        <span data-status-label>checking connection…</span>
+      </div>
+    </section>
+
+    <!-- Right: form panel -->
+    <section class="auth-panel">
+      <div class="auth-card">
+        <p class="eyebrow">Welcome back</p>
+        <h2>Sign in to your account</h2>
+        <p class="subtext">Enter your credentials to continue.</p>
+
+        <div class="alert" data-alert></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            <p class="hint" data-hint-email></p>
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <label for="password">Password</label>
+            </div>
+            <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password"
+              required />
+            <p class="hint" data-hint-password></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submit-btn">Sign in</button>
+        </form>
+
+        <p class="auth-switch">Don't have an account? <a href="register.html">Create one</a></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/status.js"></script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Admin Dashboard | ExamPortal</title><link rel="stylesheet" href="css/style.css" /></head>
+<body><div class="dash-shell"><nav class="dash-nav"><div class="brand-mark"><span class="dot"></span> ExamPortal · Admin</div><button class="btn-logout" id="logout-btn">Sign out</button></nav><main class="dash-main">
+  <p class="eyebrow">Administrator Portal</p><h1>Welcome<span id="welcome-name"></span>.</h1><div class="alert" data-alert></div>
+  <div class="card-grid" style="margin-bottom: 2rem;"><div class="info-card"><div class="label">Name</div><div class="value" data-field="name"></div></div><div class="info-card"><div class="label">Email</div><div class="value" data-field="email"></div></div><div class="info-card"><div class="label">Role</div><div class="value" data-field="role"></div></div></div>
+  <h2>Platform metrics</h2><div class="card-grid" style="margin: 1rem 0 2rem;"><div class="info-card"><div class="label">Total users</div><div class="value" id="metric-users">—</div></div><div class="info-card"><div class="label">Questions</div><div class="value" id="metric-questions">—</div></div><div class="info-card"><div class="label">Exams taken</div><div class="value" id="metric-scores">—</div></div></div>
+  <h2>Registered users</h2><div id="users-list" style="display: flex; flex-direction: column; gap: .75rem; margin-top: 1rem;"></div>
+</main></div><script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/admin-dashboard.js"></script></body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal | Academic Evaluation System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="dash-shell">
+    <nav class="dash-nav">
+      <div class="brand-mark"><span class="dot"></span> ExamPortal</div>
+      <button id="logout-btn" class="btn-logout">Sign out</button>
+    </nav>
+
+    <main class="dash-main" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+      <p class="eyebrow">Student Portal</p>
+      <h1>Welcome<span id="welcome-name"></span>.</h1>
+
+      <div class="alert" data-alert></div>
+
+      <!-- User Info Grid -->
+      <div class="card-grid" style="margin-bottom: 3rem;">
+        <div class="info-card">
+          <div class="label">Name</div>
+          <div class="value" data-field="name"><span class="skeleton"></span></div>
+        </div>
+        <div class="info-card">
+          <div class="label">Email</div>
+          <div class="value" data-field="email"><span class="skeleton"></span></div>
+        </div>
+        <div class="info-card">
+          <div class="label">Role</div>
+          <div class="value" data-field="role"><span class="skeleton"></span></div>
+        </div>
+      </div>
+
+      <!-- Exam Section -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+        <div style="display: flex; justify-content: space-between; gap: 1rem; align-items: center;">
+          <h2>Available Assessment</h2>
+          <p id="exam-timer" class="exam-timer" aria-live="polite">10:00</p>
+        </div>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">You have 10 minutes. Please answer all questions before submitting your exam.</p>
+        
+        <form id="exam-form">
+          <div id="exam-questions-list" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <!-- JavaScript will inject the exam questions here -->
+          </div>
+          
+          <div id="submit-section" style="display: none; margin-top: 3rem; text-align: center;">
+            <button type="submit" class="btn btn-primary" style="max-width: 300px;">Submit Exam</button>
+            <p id="exam-msg" style="margin-top: 1rem; font-weight: 500;"></p>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/student-exam.js"></script>
+</body>
+</html>
