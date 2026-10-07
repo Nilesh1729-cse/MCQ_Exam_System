@@ -2,6 +2,8 @@
 
 A client-server multiple-choice exam application with three roles: **Student**, **Examiner**, and **Admin**. It uses a static HTML/CSS/JavaScript frontend, an Express.js API, and MySQL for data storage.
 
+For the full architecture, database, authentication, and API reference, see [DOCUMENTATION.md](DOCUMENTATION.md).
+
 ## Features
 
 - Secure registration and login with JWT authentication
@@ -44,7 +46,7 @@ Expected output:
 
 ```text
 MySQL connection OK.
-API listening on http://localhost:5000
+API listening on http://localhost:5001
 ```
 
 Then open [frontend/index.html](frontend/index.html) with Live Server/Five Server. It will normally be available at one of these addresses:
@@ -80,4 +82,4 @@ Both local addresses are allowed by the backend.
 
 - **"Could not reach the server"**: Ensure `npm start` is still running in the `backend` terminal, then refresh the frontend.
 - **MySQL connection error**: Start the MySQL service and verify `DB_HOST`, `DB_USER`, `DB_PASSWORD`, and `DB_NAME` in `backend/.env`.
-- **Port 5000 already in use**: Stop the other process using the port, or change `PORT` in `backend/.env` and update the frontend API base URL accordingly.
+- **Port 5001 already in use**: Stop the other process using the port, or change `PORT` in `backend/.env` and update the frontend API base URL accordingly.
